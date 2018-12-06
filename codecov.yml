@@ -4,18 +4,18 @@ coverage:
       default: off
       adder:
         flags: adder
-        assume: true
       subtractor:
         target: 50%
         flags: subtractor
-        assume: true
 flags:
   adder:  
     paths:
       - src/adder/
+    assume: true
   subtractor:
     paths:
       - src/subtractor/
+    assume: true
   tests:
     paths:
       - tests/
