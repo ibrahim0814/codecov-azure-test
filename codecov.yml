@@ -1,0 +1,21 @@
+coverage:
+  status:
+    project:
+      default: off
+      adder:
+        flags: adder
+        assume: true
+      subtractor:
+        target: 50%
+        flags: subtractor
+        assume: true
+flags:
+  adder:  
+    paths:
+      - src/adder/
+  subtractor:
+    paths:
+      - src/subtractor/
+  tests:
+    paths:
+      - tests/
