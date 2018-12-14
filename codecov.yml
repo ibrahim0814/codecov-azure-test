@@ -19,3 +19,7 @@ flags:
   tests:
     paths:
       - tests/
+
+codecov:
+  ci:
+    - dev.azure.com
