@@ -11,11 +11,11 @@ test.subtractor:
 	python -m pytest --cov=src/subtractor --cov-report=xml tests/unit/subtractor
 
 codecov: 
-	bash <(curl http://localhost/bash) -t 09104459-dbd4-4187-bf70-933c0d9bb97b -f coverage.xml -F adder -F subtractor
+	bash <(curl http://localhost/bash) -t 599495b2-7d4b-4fdd-995c-514f49b53cd4 -f coverage.xml -F adder -F subtractor
 	# bash <(curl http://http://ccmigrate-sg1seod6.ngrok.io/bash) -t 91d320d4-75c9-47a0-8751-326a542f2cfc -f coverage.xml -F adder -F subtractor
 
 codecov.adder:
 	bash <(curl http://localhost/bash) -t 09104459-dbd4-4187-bf70-933c0d9bb97b -f coverage.xml -F adder
 
 codecov.subtractor:
-	bash <(curl http://localhost/bash) -t 09104459-dbd4-4187-bf70-933c0d9bb97b -f coverage.xml -F subtractor
+	bash <(curl http://localhost/bash) -t 599495b2-7d4b-4fdd-995c-514f49b53cd4 -f coverage.xml -F subtractor
