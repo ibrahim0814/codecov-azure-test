@@ -12,6 +12,7 @@ test.subtractor:
 
 codecov: 
 	bash <(curl http://localhost/bash) -t 09104459-dbd4-4187-bf70-933c0d9bb97b -f coverage.xml -F adder -F subtractor
+	# bash <(curl http://http://ccmigrate-sg1seod6.ngrok.io/bash) -t 91d320d4-75c9-47a0-8751-326a542f2cfc -f coverage.xml -F adder -F subtractor
 
 codecov.adder:
 	bash <(curl http://localhost/bash) -t 09104459-dbd4-4187-bf70-933c0d9bb97b -f coverage.xml -F adder

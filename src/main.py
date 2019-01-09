@@ -9,7 +9,8 @@ def main():
     diff = Subtractor().subtract(x,y)
     product = Adder().multiply(x,y)
     quotient = Subtractor().divide(x,y)
-    print("Given: {} and {}. The sum: {}. The difference: {}. The product: {}. The quotient: {}").format(x, y, sum, diff, product, quotient)
+    fraction = Subtractor().fractionate(x)
+    print("Given: {} and {}. The sum: {}. The difference: {}. The product: {}. The quotient: {}. The fraction: {}").format(x, y, sum, diff, product, quotient, fraction)
 
 
 if __name__ == "__main__":
