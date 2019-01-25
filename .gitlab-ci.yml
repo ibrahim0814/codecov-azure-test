@@ -1,21 +1,14 @@
 image: python:3.6-alpine
 
 stages:
-  - build
   - test
   - coverage
 
-install_dependencies:
-  stage: build
+test_with_pytest:
+  stage: test
   script:
     - pip install -r requirements.txt
-  artifacts:
-    paths:
-      - /root/.cache/pip/
-
-test_with_lab:
-  stage: test
-  script: python -m pytest --cov=src --cov-report=xml tests/unit
+    - python -m pytest --cov=src --cov-report=xml tests/unit
   artifacts:
     paths:
       - coverage.xml
