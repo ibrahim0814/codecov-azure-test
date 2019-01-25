@@ -1,7 +1,2 @@
-psycopg2
-scrapy
-scrapy-splash
-codecov
-coverage
 pytest
 pytest-cov
