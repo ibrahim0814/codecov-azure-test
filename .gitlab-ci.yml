@@ -10,7 +10,8 @@ install_dependencies:
   script:
     - pip install -r requirements.txt
   artifacts:
-    - /root/.cache/pip/
+    paths:
+      - /root/.cache/pip/
 
 test_with_lab:
   stage: test
