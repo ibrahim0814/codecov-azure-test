@@ -1,7 +1,9 @@
 coverage:
   status:
     project:
-      default: off
+      default:
+        target: 90%
+        threshold: null
       adder:
         flags: adder
       subtractor:
