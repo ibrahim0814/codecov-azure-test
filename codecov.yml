@@ -20,6 +20,14 @@ flags:
     paths:
       - tests/
 
+comment:
+  layout: "reach, diff, flags, files"
+  behavior: default
+  require_changes: false  
+  require_base: no        
+  require_head: yes       
+  branches: null
+
 codecov:
   ci:
     - dev.azure.com
