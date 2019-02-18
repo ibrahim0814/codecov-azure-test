@@ -2,7 +2,7 @@ run:
 	python src/main.py
 
 test.unit:
-	python -m pytest --cov=src --cov-report=xml tests/unit
+	python -m pytest --cov=src --junitxml=pytest-report.xml --cov-report=xml tests/unit
 
 test.adder:
 	python -m pytest --cov=src/adder --cov-report=xml tests/unit/adder
@@ -19,3 +19,5 @@ codecov.adder:
 
 codecov.subtractor:
 	bash <(curl http://localhost/bash) -t 0b60fc99-e7f1-4b29-8e76-a03091a48f18 -f coverage.xml -F subtractor
+
+	#1ee13573-c067-40e6-972b-f7469e276721

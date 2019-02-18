@@ -4,5 +4,5 @@ from src.adder.adder import Adder
 def test_sum_two_plus_two_is_four():
     assert Adder().add(3,3) == 6
 
-# def test_sum_two_plus_two_is_not_five():
-#     assert Adder().add(3,4) != 6
+def test_sum_two_plus_two_is_not_five():
+    assert Adder().add(3,4) != 6
