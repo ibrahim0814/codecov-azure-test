@@ -4,24 +4,6 @@ coverage:
       default:
         target: 90%
         threshold: null
-      adder:
-        flags: adder
-      subtractor:
-        target: 50%
-        flags: subtractor
-flags:
-  adder:  
-    paths:
-      - src/adder/
-    assume: true
-  subtractor:
-    paths:
-      - src/subtractor/
-    assume: true
-  tests:
-    paths:
-      - tests/
-
 comment:
   layout: "reach, diff, flags, files"
   behavior: default
