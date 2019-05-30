@@ -24,7 +24,6 @@ jobs:
       pip install pytest 
       pip install pytest-cov
       python -m pytest --junitxml=junit/test-results.xml --cov=src --cov-report=xml --cov-report=html tests/unit 
-
     displayName: 'pytest'
 
   - task: PublishTestResults@2
@@ -53,8 +52,8 @@ jobs:
       cliProjectKey: '98adf9e9-ff43-4c23-9b59-928b8fa7cc3e'
       cliProjectName: 'codecov-assume-flag-test'
       cliSources: '.'
-      extraProperties: 'sonar.python.coverage.reportPaths=*coverage*.xml
-      sonar.python.xunit.reportPath=*test-results.xml'
+      # extraProperties: 'sonar.python.coverage.reportPaths=*coverage*.xml
+      # sonar.python.xunit.reportPath=*test-results.xml'
   - task: SonarQubeAnalyze@4
   - task: SonarQubePublish@4
     inputs:
