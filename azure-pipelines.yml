@@ -49,13 +49,12 @@ jobs:
   steps:
   - task: SonarQubePrepare@4
     inputs:
+      SonarQube: 'Codecov SonarQube'
       scannerMode: 'CLI'
-      configMode: 'file'
-      extraProperties: 'sonar.projectKey=98adf9e9-ff43-4c23-9b59-928b8fa7cc3e 
-        sonar.sources=. 
-        sonar.host.url=http://35.192.11.13 
-        sonar.login=87334a2a05d48292d402849047ac54659975af32'
-      SonarQube: 'http://35.192.11.13'
+      configMode: 'manual'
+      cliProjectKey: '98adf9e9-ff43-4c23-9b59-928b8fa7cc3e'
+      cliProjectName: 'codecov-assume-flag-test'
+      cliSources: '.'
   - task: SonarQubeAnalyze@4
   - task: SonarQubePublish@4
     inputs:
