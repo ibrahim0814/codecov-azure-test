@@ -45,8 +45,6 @@ jobs:
       summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
       reportDirectory: '$(System.DefaultWorkingDirectory)/**/htmlcov'
 
-- job: 'Scan'
-  steps:
   - task: SonarQubePrepare@4
     inputs:
       SonarQube: 'Codecov SonarQube'
@@ -55,7 +53,8 @@ jobs:
       cliProjectKey: '98adf9e9-ff43-4c23-9b59-928b8fa7cc3e'
       cliProjectName: 'codecov-assume-flag-test'
       cliSources: '.'
-      extraProperties: 'sonar.python.coverage.reportPaths=coverage.xml'
+      extraProperties: 'sonar.python.coverage.reportPaths=coverage.xml
+      sonar.python.xunit.reportPath=junit/test-results.xml'
   - task: SonarQubeAnalyze@4
   - task: SonarQubePublish@4
     inputs:
