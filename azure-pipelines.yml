@@ -55,6 +55,7 @@ jobs:
       cliProjectKey: '98adf9e9-ff43-4c23-9b59-928b8fa7cc3e'
       cliProjectName: 'codecov-assume-flag-test'
       cliSources: '.'
+      extraProperties: 'sonar.python.coverage.reportPaths=coverage.xml'
   - task: SonarQubeAnalyze@4
   - task: SonarQubePublish@4
     inputs:
