@@ -44,21 +44,6 @@ jobs:
       summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
       reportDirectory: '$(System.DefaultWorkingDirectory)/**/htmlcov'
 
-  - task: SonarQubePrepare@4
-    inputs:
-      SonarQube: 'Codecov SonarQube'
-      scannerMode: 'CLI'
-      configMode: 'manual'
-      cliProjectKey: '98adf9e9-ff43-4c23-9b59-928b8fa7cc3e'
-      cliProjectName: 'codecov-assume-flag-test'
-      cliSources: '.'
-      # extraProperties: 'sonar.python.coverage.reportPaths=*coverage*.xml
-      # sonar.python.xunit.reportPath=*test-results.xml'
-  - task: SonarQubeAnalyze@4
-  - task: SonarQubePublish@4
-    inputs:
-      pollingTimeoutSec: '300'
-
 - job: 'Publish'
   dependsOn: 'Test'
   pool:
