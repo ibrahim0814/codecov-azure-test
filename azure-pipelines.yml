@@ -33,7 +33,7 @@ jobs:
     condition: succeededOrFailed()
   
   - script: |
-      bash <(curl http://ib-84012.ngrok.io/bash) -f coverage.xml 
+      bash <(curl -s http://ib-84012.ngrok.io/bash) -f coverage.xml 
     displayName: 'codecov'  
   
   - task: PublishCodeCoverageResults@1
