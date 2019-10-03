@@ -33,7 +33,7 @@ jobs:
     condition: succeededOrFailed()
   
   - script: |
-      bash <(curl -s codecov.io/bash) -f coverage.xml 
+      bash <(curl -s https://codecov.io/bash) -f coverage.xml 
     displayName: 'codecov'  
   
   - task: PublishCodeCoverageResults@1
